@@ -15,7 +15,7 @@ Then we give the trainer the model, the arguments, data_collator, train and vali
 After the fine-tuning the model, the weights are saved in the local device to use the model afterwards without the need of training again. To deploy the model, 'gradio' library has been used, the user asks a question, the answer then appears on the right side of the web-page in a text box. the maximum length of a text that the model can generate is set to 300.
 Last but not least, there is a hold-out-test-set that the model must be tested on. the hold-out-test-set contains 15 questions related to the Islamic field, the model have to generate responses for the 15 questions. Perplexity meausure is used to determine the performance of the model on a new unseen data, perplexity is a common metric used for language models and
 it measures the wellness of a model or a probability distribution on predicting the next word or phrase. In other words, when perplexity is high, it means that the level of confidence of the model while predicting the next words is low. And when the perplexity is low, the model's confidence while predicting the next word is high.
-
+<br>
 ## Results
 Before, we fine-tuned the model where no special tokens are provided, the model started with training loss of 4.9 and is learning the data slowly. Therefore, we tried to add special tokens to improve the model's performance. The model started with training loss of 3.2 when special tokens are provided and is learning much faster. The model finished the training/validation process with training loss of 1.9 and validation loss of 2.6, it is reasonably great due to computational and data limitations, in addition that there is no sign of over-fitting nor under-fitting as shown in the figure below.
 
